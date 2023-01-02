@@ -1,0 +1,115 @@
+.container {
+    margin: 0 auto;
+    max-width: var(--container-max-width);
+}
+
+.search-form {
+    position: relative;
+    margin-top: 2.625rem;
+    margin-bottom: 2.375rem;
+}
+
+.search-form__input {
+    display: block;
+    box-shadow: var(--primary-box-shadow);
+    border: none;
+    border-radius: 0.9375rem;
+    background: url("../public/svg/icon-search.svg") no-repeat top 1.4375rem
+        left 2rem;
+    background-size: 1.5rem;
+    background-color: var(--search-form-input-background-color);
+    padding: 1.375rem 7.875rem 1.375rem 5rem;
+    width: 100%;
+    height: 4.375rem;
+    font-size: 1.125rem;
+    color: var(--search-form-input-color);
+}
+.search-form__input:focus-visible,
+.search-form__input:focus {
+    outline: 0.125rem dashed var(--focus-visible-outline-color);
+    outline-offset: -0.125rem;
+}
+
+.search-form__placeholder {
+    position: absolute;
+    top: 1.375rem;
+    left: 5rem;
+    font-size: 1.125rem;
+    transition: top var(--primary-transition), left var(--primary-transition);
+}
+
+.search-form__input:not(:placeholder-shown) ~ .search-form__placeholder {
+    top: -1.875rem;
+    left: 2.1875rem;
+}
+
+.search-form__button {
+    display: inline-block;
+    position: absolute;
+    top: 0.4375rem;
+    right: 0.4375rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 0.625rem;
+    background-color: var(--blue);
+    padding: 0.875rem 1.5rem;
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 700;
+    transition: background-color var(--primary-transition);
+}
+.search-form__button:focus-visible,
+.search-form__button:focus {
+    outline: 0.125rem dashed var(--focus-visible-outline-color);
+    outline-offset: -0.125rem;
+}
+.search-form__button:hover,
+.search-form__button:active {
+    background-color: hsl(212deg, 100%, 69%);
+}
+
+.search-form__error {
+    position: absolute;
+    top: 4.625rem;
+    right: 0;
+    color: hsl(0deg, 91%, 62%);
+    font-weight: 700;
+}
+
+.header__home {
+    color: var(--header-logo-color);
+}
+
+.header__home:focus-visible,
+.header__home:focus {
+    outline: 0.125rem dashed var(--focus-visible-outline-color);
+    outline-offset: -0.125rem;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.result__icon {
+    margin-right: 10px;
+}
+
+.result__name {
+    color: var(--result-name-color);
+    font-size: clamp(1rem, -0.04rem + 4.44vw, 1.63rem);
+}
+
+.result__link {
+    color: var(--link-color);
+    text-decoration: none;
+}
+.result__link:hover,
+.result__link:active {
+    text-decoration: underline;
+}
+.result__link:focus-visible,
+.result__link:focus {
+    outline: 0.125rem dashed var(--focus-visible-outline-color);
+    outline-offset: -0.125rem;
+}
